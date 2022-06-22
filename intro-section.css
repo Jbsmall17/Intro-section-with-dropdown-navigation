@@ -1,0 +1,395 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Epilogue',sans-serif;
+}
+body{
+  width:100vw;
+  height:100vh;
+}
+.container{
+  background-color: hsl(0,0%,98%);
+  margin:30px auto;
+  max-width: 14440px;
+  width:95%;
+  padding: 30px 50px;
+}
+header{
+  margin-bottom: 200px;
+}
+header .logo{
+  float:left;
+  margin-right: 30px;
+  font-size: 50px;
+  font-weight: 700;
+}
+header nav{
+  display:flex;
+  justify-content: space-between;
+}
+header nav ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 20px;
+}
+li.list1{
+  position:relative;
+}
+li.list1 a:hover,li.list2 a:hover{
+  color:hsl(0,0%,8%);
+}
+
+li.list1 a:hover + svg ,li.list2 a:hover + svg{
+  transform: rotate(180deg);
+  color:hsl(0,0%,8%);
+}
+ul.subList1{
+  width:190px;
+  height:190px;
+  display:flex;
+  flex-direction:column;
+  background: hsl(0,0%,100%);
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+  display:none;
+  position:absolute;
+  right:0;
+}
+li.list1:hover .subList1, li.list2:hover .subList2{
+  display:block;
+}
+ul.subList1 li{
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+ul.subList1 li a{
+  text-decoration: none;
+  font-size: 18px;
+  margin-left:40px;
+}
+ul.subList1 li svg{
+  position:absolute;
+  top:0;
+  left:0;
+}
+li.list2{
+  position:relative;
+}
+ul.subList2{
+  width:150px;
+  display:flex;
+  flex-direction:column;
+  background: hsl(0,0%,100%);
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+  display:none;
+  position:absolute;
+  left:0;
+}
+ul.subList2 li{
+  margin-bottom: 10px;
+}
+ul.subList2 li a{
+  text-decoration: none;
+  font-size: 18px;
+}
+header img{
+  display:none;
+}
+header nav ul li{
+  position:relative;
+  border:none;
+  margin-right:35px;
+}
+header nav ul li a{
+  font-size: 18px;
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+header nav ul li svg{
+  position:absolute;
+  top:5px;
+  margin-left: 3px;
+}
+header nav div{
+  margin-top:20px;
+}
+header nav div button.left{
+  background: transparent;
+  border:none;
+  padding:10px 20px;
+}
+header nav div button.left:hover{
+   cursor:pointer;
+}
+header nav div button.left a:hover{
+  color:hsl(0,0%,8%);
+}
+header nav div button.right{
+  background: transparent;
+  border:2px solid hsl(0,0%,41%);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+header nav div button.right:hover{
+  border-color: hsl(0,0%,8%);
+  cursor:pointer;
+}
+header nav div button.right a:hover{
+  color:hsl(0,0%,8%);
+}
+header nav div button a{
+  color:hsl(0,0%,41%);
+  font-size: 18px;
+  text-decoration: none;
+}
+li.list3 a:hover{
+  color:hsl(0,0%,8%)
+}
+main{
+  clear:both;
+  display:flex;
+  justify-content: space-between;
+}
+main section{
+  flex:1
+}
+main section h1{
+  font-size:4.5em;
+  line-height: 1.0em;
+}
+main section h1:nth-child(2){
+ margin-bottom: 100px;
+}
+main section p {
+  text-align:left;
+  color:hsl(0, 0%, 41%);
+  margin-bottom: 100px;
+  font-size: 18px;
+}
+main section  button{
+  border:2px solid hsl(0,0%,8%);
+  border-radius: 10px;
+  background-color: hsl(0,0%,8%);
+  color:white;
+  padding:10px 20px;
+  font-weight: 500;
+  cursor:pointer;
+  margin-bottom: 120px;
+}
+main section button:hover{
+  background: transparent;
+  color:hsl(0,0%,8%)
+}
+main section img{
+  margin-top: -120px;
+  width:90%;
+}
+main section div{
+  display: flex;
+}
+main section img.mobile{
+  display:none;
+}
+main section img.desktop{
+  display:block;
+}
+main section div svg{
+  margin-right: 30px;
+}
+@media screen and (max-width:375px){
+  body{
+     width:100vw;
+     height: 100vh;
+     overflow: hidden;
+  }
+  .container{
+    background-color: hsl(0,0%,98%);
+    margin:0 auto;
+    max-width: 375px;
+    width:90%;
+    padding: 70px 0px;
+    position:relative;
+  }
+  header{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:20px;
+    width: 100%;
+    height: 100%;
+  }
+  header .logo{
+    float:left;
+    margin-right: 20px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  header nav{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:start;
+    background: linear-gradient(to right,
+    rgba(0,0,0,0.4)0px,
+    rgba(0,0,0,0.4)150px,
+    hsl(0,0%,100%)150px,
+    hsl(0,0%,100%)380px);
+    z-index:9999;
+    transition: ease-out 0.5s;
+  }
+  header.active nav{
+    transform: translateX(120%);
+  }
+  header nav ul{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 70px;
+    margin-left:50%;
+  }
+  header nav ul li{
+    margin-bottom: 30px;
+  }
+  header nav ul li.list1,header nav ul li.list2{
+    position:relative;
+    height: auto;
+    transition: ease-in 0.4s;
+  }
+  li.list1.active{
+    height:150px;
+  }
+  li.list1 ul.subList1 li a,li.list2 ul.subList2 li a{
+    transform: rotate(0deg);
+    transition: ease-in 3s;
+  }
+  li.list1.active ul.subList1 li a,li.list2.active ul.subList2 li a{
+    transform: rotate(360deg);
+  }
+  li.list1.active a{
+    color:hsl(0,0%,8%)
+  }
+  li.list1.active ul.subList1 li a,li.list2.active ul.subList2 li a{
+    color: hsl(0,0%,41%);
+  }
+  li.list2.active{
+    height:100px;
+  }
+  li.list2.active a{
+    color:hsl(0,0%,8%)
+  }
+  li.list1 svg,li.list2 svg{
+    transform: rotate(0deg);
+    color:hsl(0,0%,8%);
+    transition: ease-in 0.4s;
+  }
+  li.list1.active svg,li.list2.active svg {
+    transform: rotate(180deg);
+    color:hsl(0,0%,8%);
+  }
+  li.list1 ul.subList1,li.list2 ul.subList2{
+    display:flex;
+    flex-direction:column;
+    background: hsl(0,0%,100%);
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+    opacity:0;
+    position:absolute;
+    top:-52px;
+    left:-60px;
+    transition: ease-in 0.4s;
+  }
+  li.list1.active ul.subList1, li.list2.active ul.subList2{
+    opacity:1;
+    color: hsl(0, 0%, 41%);
+  }  
+  header nav div{
+    display:flex;
+    flex-direction: column;
+    margin-left:50%;
+  }
+  header img{
+    display:block;
+    position:absolute;
+    top:32px;
+    right:20px;
+    z-index: 100000;
+  }
+  header.active img.cross-menu{
+    display:none;
+  }
+  header img.menu{
+    display:none;
+  }
+  header.active img.menu{
+    display:block;
+  }
+  header img.cross-menu{
+    display:block;
+  }
+  main{
+    flex-direction: column-reverse;
+  }
+  main section img{
+    margin-top:0px;
+    width:90%;
+  }
+  main section img.mobile{
+    display:block;
+  }
+  main section img.desktop{
+    display:none;
+  }
+  main section{
+    width:100%;
+    flex:1;
+  }
+  main section span{
+    display: flex;
+    justify-content: center;
+  }
+  main section span h1:nth-child(1){
+    margin-right: 10px;
+  }
+  main section h1{
+    font-size:2.0em;
+    line-height: 1.0em;
+  }
+  main section span{
+    margin-top: 40px;
+  }
+  main section p {
+    margin-top:-70px;
+    text-align: center;
+    color:hsl(0, 0%, 41%);
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  main section button{
+    margin-bottom: 30px;
+  }
+  main section div{
+    width:370px;
+    padding:0;
+  }
+  main section button{
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  main section div svg{
+    transform: scale(0.8);
+    margin-right: -10px;
+}
+}
