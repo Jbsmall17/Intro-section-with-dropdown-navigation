@@ -204,6 +204,107 @@ main section img.desktop{
 main section div svg{
   margin-right: 30px;
 }
+@media screen and (min-width:375px) and (max-width:1000px){
+  .container{
+    background-color: hsl(0,0%,98%);
+    margin:20px auto;
+    max-width: 1000px;
+    width:95%;
+    padding: 20px 30px;
+  }
+  header{
+    margin-bottom: 150px;
+    display:flex;
+    flex-direction: column;
+  }
+  header .logo{
+    float:none;
+    text-align: center;
+    margin-right: 0px;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  header nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+ header nav ul{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:100%;
+  text-align: center;
+}
+header nav div{
+  text-align: center;
+ }
+ main{
+  flex-direction: column-reverse;
+ }
+header nav ul li.list1,header nav ul li.list2{
+  position:relative;
+  height: auto;
+  transition: ease-in 0.4s;
+}
+li.list1 ul.subList1 li a,li.list2 ul.subList2 li a{
+  transform: rotate(0deg);
+  transition: ease-in 3s;
+}
+li.list1.active ul.subList1 li a,li.list2.active ul.subList2 li a{
+  transform: rotate(360deg);
+}
+li.list1.active a{
+  color:hsl(0,0%,8%)
+}
+li.list1.active ul.subList1 li a,li.list2.active ul.subList2 li a{
+  color: hsl(0,0%,41%);
+}
+li.list2.active a{
+  color:hsl(0,0%,8%)
+}
+li.list1 svg,li.list2 svg{
+  transform: rotate(0deg);
+  color:hsl(0,0%,8%);
+  transition: ease-in 0.4s;
+}
+li.list1.active svg,li.list2.active svg {
+  transform: rotate(180deg);
+  color:hsl(0,0%,8%);
+}
+li.list1 ul.subList1{
+  display:flex;
+  flex-direction:column;
+  background: hsl(0,0%,100%);
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+  opacity:0;
+  position:absolute;
+  top:-450%;
+  left:50%;
+  transform:translateX(50%);
+  transition: ease-in 0.4s;
+}
+li.list2 ul.subList2{
+  display:flex;
+  flex-direction:column;
+  background: hsl(0,0%,100%);
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+  opacity:0;
+  position:absolute;
+  top:-450%;
+  right:50%;
+  transform:translateX(0%);
+  transition: ease-in 0.4s;
+}
+li.list1.active ul.subList1, li.list2.active ul.subList2{
+  opacity:1;
+  color: hsl(0, 0%, 41%);
+}  
+}
 @media screen and (max-width:375px){
   body{
      width:100vw;
